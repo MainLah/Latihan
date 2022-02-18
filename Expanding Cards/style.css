@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+html {
+  overflow: hidden;
+  font-family: "Muli", sans-serif;
+}
+
+h3 {
+  color: white;
+}
+
+.container {
+  min-width: 90vw;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  position: relative;
+  margin: 10px;
+  width: 80px;
+  border-radius: 50px;
+  height: 80vh;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.active {
+  width: 800px;
+  transition: all 1s;
+}
+
+.active h3 {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.panel:nth-child(1) {
+  background-image: url(/Assets/dam.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel:nth-child(2) {
+  background-image: url(/Assets/desert.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel:nth-child(3) {
+  background-image: url(/Assets/ocean.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel:nth-child(4) {
+  background-image: url(/Assets/train.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel:nth-child(5) {
+  background-image: url(/Assets/valley.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
