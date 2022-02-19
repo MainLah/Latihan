@@ -46,35 +46,35 @@ h3 {
 }
 
 .panel:nth-child(1) {
-  background-image: url(/Assets/dam.jpg);
+  background-image: url(./Assets/dam.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .panel:nth-child(2) {
-  background-image: url(/Assets/desert.jpg);
+  background-image: url(./Assets/desert.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .panel:nth-child(3) {
-  background-image: url(/Assets/ocean.jpg);
+  background-image: url(./Assets/ocean.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .panel:nth-child(4) {
-  background-image: url(/Assets/train.jpg);
+  background-image: url(./Assets/train.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .panel:nth-child(5) {
-  background-image: url(/Assets/valley.jpg);
+  background-image: url(./Assets/valley.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
