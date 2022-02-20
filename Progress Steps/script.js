@@ -10,6 +10,9 @@ next.addEventListener("click", () => {
   circles[circleCounter].classList.add("active");
   circleCounter++;
   progressCounter += progressDivided;
+  if (progressCounter > 100) {
+    progressCounter = 100;
+  }
   progress.style.width = `${progressCounter}%`;
   if (circleCounter > 1) {
     prev.removeAttribute("disabled");
