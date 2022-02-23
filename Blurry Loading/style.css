@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+}
+
+.bg {
+  background: url(./Assets/nicholas-ng-XXk40q7-cC8-unsplash.jpg) no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+#load-percent {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 56px;
+  z-index: 1;
+}
