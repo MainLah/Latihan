@@ -9,7 +9,7 @@ const interval = setInterval(() => {
   index--;
   loadPercent.innerText = `${percent}%`;
   percent++;
-  if (index === -1 && percent === 101) {
+  if (index < 0 && percent > 100) {
     clearInterval(interval);
     setTimeout(() => {
       loadPercent.innerText = "";
