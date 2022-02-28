@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --hover: 75%;
+  --other: 25%;
+  --speed: 1s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0;
+  z-index: 100;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--speed);
+}
+
+.split.left::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  background-color: aqua;
+}
+
+.split.right::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  background-color: antiquewhite;
+}
+
+.split.left {
+  left: 0;
+  background-image: url(./Assets/kelly-sikkema-b2vuG8Ijzqw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.split.right {
+  right: 0;
+  background-image: url(./Assets/tezos-Lh3HAnw8RtU-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container.hover-left .split.left {
+  width: var(--hover);
+  transition: all var(--speed);
+}
+
+.container.hover-left .split.right {
+  width: var(--other);
+  transition: all var(--speed);
+}
+
+.container.hover-right .split.right {
+  width: var(--hover);
+  transition: all var(--speed);
+}
+
+.container.hover-right .split.left {
+  width: var(--other);
+  transition: all var(--speed);
+}
