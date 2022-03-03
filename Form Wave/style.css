@@ -25,9 +25,18 @@ input:focus {
   outline: none;
 }
 
-label {
-  transform: translateY(20px);
+.label {
+  margin-bottom: -22px;
+  height: 40px;
   width: 110px;
+  display: inline-block;
+  z-index: 100;
+}
+
+.label span.down {
+  display: inline-block;
+  position: relative;
+  top: 20px;
 }
 
 .container {
