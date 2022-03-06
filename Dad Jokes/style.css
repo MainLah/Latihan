@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: chartreuse;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  margin: 4rem;
+}
+
+button {
+  background-color: chocolate;
+  padding: 1.25rem 1rem;
+  font-size: 18px;
+  margin: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.container {
+  background-color: white;
+  min-width: 50rem;
+  max-width: 50rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dad-jokes {
+  max-width: 50rem;
+  font-weight: 400;
+}
