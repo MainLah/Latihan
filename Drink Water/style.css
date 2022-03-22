@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: sandybrown;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.main-cup {
+  text-align: center;
+}
+
+.main-cup .cup {
+  position: relative;
+  background-color: #fff;
+  height: 400px;
+  width: 175px;
+  margin: 0 auto;
+  border: 5px rgb(51, 113, 228) solid;
+  border-radius: 0 0 50px 50px;
+}
+
+.main-cup .water {
+  background-color: rgb(51, 113, 228);
+  height: 102%;
+  width: 175px;
+  position: absolute;
+  top: -5px;
+  bottom: 0;
+  left: -5px;
+  right: 0;
+  border-radius: 0 0 50px 50px;
+  z-index: 2;
+}
+
+.remaining {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.remaining h3,
+.remaining p {
+  margin: 0;
+}
