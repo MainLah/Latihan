@@ -5,12 +5,14 @@ const SEARCH_API =
   'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
 
 const main = document.querySelector(".main");
+const searchInput = document.querySelector(".search-input");
 
 async function search(keyword) {
   try {
     const res = await fetch(SEARCH_API + keyword);
     const movies = await res.json();
-    movies.results.forEach((movie) => makeCard(movie));
+    main.innerHTML = "";
+    movies.results.forEach((movie) => (main.innerHTML += makeCard(movie)));
   } catch (error) {
     console.error(error);
     document.body.write("Movie tidak ditemukan");
@@ -21,14 +23,14 @@ async function search(keyword) {
   try {
     const res = await fetch(API_URL);
     const movies = await res.json();
-    movies.results.forEach((movie) => makeCard(movie));
+    movies.results.forEach((movie) => (main.innerHTML += makeCard(movie)));
   } catch (error) {
     console.error(error);
   }
 })();
 
 function makeCard(movie) {
-  const card = `
+  return `
     <div class="movie">
       <img
         src="https://image.tmdb.org/t/p/w1280/${movie.poster_path}"
@@ -44,8 +46,16 @@ function makeCard(movie) {
       </div>
     </div>
   `;
-  main.innerHTML += card;
 }
+
+searchInput.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (e.target.firstElementChild.value)
+    search(e.target.firstElementChild.value);
+
+  e.target.firstElementChild.value = "";
+});
 
 function rating(rating) {
   if (rating > 8) {

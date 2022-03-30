@@ -1,20 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   height: 100vh;
   width: 100vw;
   background-color: coral;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: antiquewhite;
+  height: 75px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+nav .search {
+  margin-right: 3rem;
+  padding: 10px;
+  height: 36px;
+  width: 200px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  border: 1px black solid;
+}
+
+.main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .movie {
-  width: 250px;
-  height: 400px;
+  position: relative;
+  margin: 1rem;
+  min-height: 550px;
+  width: 300px;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -24,9 +51,47 @@ body {
 
 .movie img {
   margin: 0 auto;
-  width: 200px;
+  width: 300px;
 }
 
 .movie .overview {
+  background-color: antiquewhite;
+  position: absolute;
+  padding: 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  max-width: 100%;
   transform: translateY(101%);
+  transition: transform 0.5s;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.movie-info {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+}
+
+.movie-info h3 {
+  font-size: 14px;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: rgb(167, 167, 52);
+}
+
+.red {
+  color: red;
 }
