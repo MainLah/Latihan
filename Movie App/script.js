@@ -50,11 +50,12 @@ function makeCard(movie) {
 
 searchInput.addEventListener("submit", (e) => {
   e.preventDefault();
+  const input = e.target.firstElementChild
 
-  if (e.target.firstElementChild.value)
-    search(e.target.firstElementChild.value);
+  if (input.value)
+    search(input.value);
 
-  e.target.firstElementChild.value = "";
+  input.value = "";
 });
 
 function rating(rating) {
